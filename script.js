@@ -3,6 +3,11 @@ let email = document.querySelector("input[type=text]");
 let errP = document.querySelector("#error");
 let errIcon = document.querySelector("#error-icon");
 
+import { DataStore } from '@aws-amplify/datastore';
+import { USER } from './models';
+
+
+
 btn.addEventListener("click", (e) => {
 	e.preventDefault();
 	if (
@@ -13,6 +18,11 @@ btn.addEventListener("click", (e) => {
 		email.classList.remove("error");
 		errIcon.classList.remove("error");
 		errP.classList.remove("error");
+		DataStore.save(
+			new USER({
+				"email": email.value
+			})
+		);
 		return true;
 	} else {
 		email.classList.add("error");
