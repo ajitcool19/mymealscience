@@ -1,6 +1,0 @@
-{
-  "AppSyncApiName": "mymealscience",
-  "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2023-01-04T18:00:36.894Z"
-}
